@@ -1,0 +1,522 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAE9151E9C7CC1D15",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../separate_working.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axis_data_fifo_0": "",
+      "axis_data_fifo_1": "",
+      "sipo_0": "",
+      "PRESENT_ENCRYPT_0": ""
+    },
+    "ports": {
+      "s_axis_tready_0": {
+        "direction": "O"
+      },
+      "s_axis_tvalid_0": {
+        "direction": "I"
+      },
+      "s_axis_tdata_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "m_axis_tdata_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "m_axis_tready_0": {
+        "direction": "I"
+      },
+      "m_axis_tvalid_0": {
+        "direction": "O"
+      },
+      "tx_enable_0": {
+        "direction": "O"
+      },
+      "s_axis_aresetn_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "s_axis_aclk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "s_axis_aresetn_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_s_axis_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "s_axis_aresetn_1": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "s_axis_aclk_1": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "s_axis_aresetn_1",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_s_axis_aclk_1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk_1": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_1",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "ip_revision": "11",
+        "xci_name": "design_1_axis_data_fifo_0_0",
+        "xci_path": "ip\\design_1_axis_data_fifo_0_0\\design_1_axis_data_fifo_0_0.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "16"
+          }
+        }
+      },
+      "axis_data_fifo_1": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "ip_revision": "11",
+        "xci_name": "design_1_axis_data_fifo_1_0",
+        "xci_path": "ip\\design_1_axis_data_fifo_1_0\\design_1_axis_data_fifo_1_0.xci",
+        "inst_hier_path": "axis_data_fifo_1",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "16"
+          }
+        }
+      },
+      "sipo_0": {
+        "vlnv": "xilinx.com:module_ref:sipo:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_sipo_0_1",
+        "xci_path": "ip\\design_1_sipo_0_1\\design_1_sipo_0_1.xci",
+        "inst_hier_path": "sipo_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sipo",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "mvalid": {
+            "direction": "I"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "done": {
+            "direction": "I"
+          },
+          "tx_enable": {
+            "direction": "O"
+          },
+          "svalid": {
+            "direction": "O"
+          },
+          "sready": {
+            "direction": "I"
+          },
+          "sdata": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ciphered": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "odat": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "idat": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "key": {
+            "direction": "O",
+            "left": "79",
+            "right": "0"
+          },
+          "load": {
+            "direction": "O"
+          }
+        }
+      },
+      "PRESENT_ENCRYPT_0": {
+        "vlnv": "xilinx.com:module_ref:PRESENT_ENCRYPT:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_PRESENT_ENCRYPT_0_0",
+        "xci_path": "ip\\design_1_PRESENT_ENCRYPT_0_0\\design_1_PRESENT_ENCRYPT_0_0.xci",
+        "inst_hier_path": "PRESENT_ENCRYPT_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PRESENT_ENCRYPT",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ciphered": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "done": {
+            "direction": "O"
+          },
+          "odat": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "idat": {
+            "direction": "I",
+            "left": "63",
+            "right": "0"
+          },
+          "key": {
+            "direction": "I",
+            "left": "79",
+            "right": "0"
+          },
+          "load": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "PRESENT_ENCRYPT_0_ciphered": {
+        "ports": [
+          "PRESENT_ENCRYPT_0/ciphered",
+          "sipo_0/ciphered"
+        ]
+      },
+      "PRESENT_ENCRYPT_0_done": {
+        "ports": [
+          "PRESENT_ENCRYPT_0/done",
+          "sipo_0/done"
+        ]
+      },
+      "PRESENT_ENCRYPT_0_odat": {
+        "ports": [
+          "PRESENT_ENCRYPT_0/odat",
+          "sipo_0/odat"
+        ]
+      },
+      "axis_data_fifo_0_m_axis_tdata": {
+        "ports": [
+          "axis_data_fifo_0/m_axis_tdata",
+          "sipo_0/din"
+        ]
+      },
+      "axis_data_fifo_0_m_axis_tvalid": {
+        "ports": [
+          "axis_data_fifo_0/m_axis_tvalid",
+          "sipo_0/mvalid"
+        ]
+      },
+      "axis_data_fifo_0_s_axis_tready": {
+        "ports": [
+          "axis_data_fifo_0/s_axis_tready",
+          "s_axis_tready_0"
+        ]
+      },
+      "axis_data_fifo_1_m_axis_tdata": {
+        "ports": [
+          "axis_data_fifo_1/m_axis_tdata",
+          "m_axis_tdata_0"
+        ]
+      },
+      "axis_data_fifo_1_m_axis_tvalid": {
+        "ports": [
+          "axis_data_fifo_1/m_axis_tvalid",
+          "m_axis_tvalid_0"
+        ]
+      },
+      "axis_data_fifo_1_s_axis_tready": {
+        "ports": [
+          "axis_data_fifo_1/s_axis_tready",
+          "sipo_0/sready"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "sipo_0/clk"
+        ]
+      },
+      "clk_1_1": {
+        "ports": [
+          "clk_1",
+          "PRESENT_ENCRYPT_0/clk"
+        ]
+      },
+      "m_axis_tready_0_1": {
+        "ports": [
+          "m_axis_tready_0",
+          "axis_data_fifo_1/m_axis_tready"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "sipo_0/rst"
+        ]
+      },
+      "s_axis_aclk_0_1": {
+        "ports": [
+          "s_axis_aclk_0",
+          "axis_data_fifo_1/s_axis_aclk"
+        ]
+      },
+      "s_axis_aclk_1_1": {
+        "ports": [
+          "s_axis_aclk_1",
+          "axis_data_fifo_0/s_axis_aclk"
+        ]
+      },
+      "s_axis_aresetn_0_1": {
+        "ports": [
+          "s_axis_aresetn_0",
+          "axis_data_fifo_1/s_axis_aresetn"
+        ]
+      },
+      "s_axis_aresetn_1_1": {
+        "ports": [
+          "s_axis_aresetn_1",
+          "axis_data_fifo_0/s_axis_aresetn"
+        ]
+      },
+      "s_axis_tdata_0_1": {
+        "ports": [
+          "s_axis_tdata_0",
+          "axis_data_fifo_0/s_axis_tdata"
+        ]
+      },
+      "s_axis_tvalid_0_1": {
+        "ports": [
+          "s_axis_tvalid_0",
+          "axis_data_fifo_0/s_axis_tvalid"
+        ]
+      },
+      "sipo_0_idat": {
+        "ports": [
+          "sipo_0/idat",
+          "PRESENT_ENCRYPT_0/idat"
+        ]
+      },
+      "sipo_0_key": {
+        "ports": [
+          "sipo_0/key",
+          "PRESENT_ENCRYPT_0/key"
+        ]
+      },
+      "sipo_0_load": {
+        "ports": [
+          "sipo_0/load",
+          "PRESENT_ENCRYPT_0/load"
+        ]
+      },
+      "sipo_0_ready": {
+        "ports": [
+          "sipo_0/ready",
+          "axis_data_fifo_0/m_axis_tready"
+        ]
+      },
+      "sipo_0_sdata": {
+        "ports": [
+          "sipo_0/sdata",
+          "axis_data_fifo_1/s_axis_tdata"
+        ]
+      },
+      "sipo_0_svalid": {
+        "ports": [
+          "sipo_0/svalid",
+          "axis_data_fifo_1/s_axis_tvalid"
+        ]
+      },
+      "sipo_0_tx_enable": {
+        "ports": [
+          "sipo_0/tx_enable",
+          "tx_enable_0"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/study/zybo/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_1 -L axis_data_fifo_v2_0_11 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench1_behav xil_defaultlib.testbench1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xpm.$unit_xpm_cdc_sv_220102727
+Compiling package xpm.axi_xil_sb_pkg_xpm_nsu
+Compiling package xpm.axi_data_integrity_checker_xpm_n...
+Compiling package xpm.xpm_axi_data_integrity_checker_n...
+Compiling package xpm.xpm_axi_xil_sb_pkg_nmu
+Compiling module xil_defaultlib.PRESENT_ENCRYPT_SBOX
+Compiling module xil_defaultlib.PRESENT_ENCRYPT_PBOX
+Compiling module xil_defaultlib.PRESENT_ENCRYPT_default
+Compiling module xil_defaultlib.design_1_PRESENT_ENCRYPT_0_0
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=5...
+Compiling module xpm.xpm_counter_updn
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=1...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=16,TDAT...
+Compiling module axis_data_fifo_v2_0_11.axis_data_fifo_v2_0_11_top(C_FAM...
+Compiling module xil_defaultlib.design_1_axis_data_fifo_0_0
+Compiling module xil_defaultlib.design_1_axis_data_fifo_1_0
+Compiling module xil_defaultlib.sipo
+Compiling module xil_defaultlib.design_1_sipo_0_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.testbench1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench1_behav
