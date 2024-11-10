@@ -1,0 +1,103 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Mon Feb 12 00:07:00 2024
+| Host         : LAPTOP-FDL84CCL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    25 |
+|    Minimum number of control sets                        |    25 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    31 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    25 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     9 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             260 |           65 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              63 |           18 |
+| Yes          | No                    | No                     |             174 |           45 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              48 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|               Clock Signal               |                                                              Enable Signal                                                              |                                             Set/Reset Signal                                            | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_0_IBUF_BUFG                         |                                                                                                                                         |                                                                                                         |                2 |              3 |         1.50 |
+|  s_axis_aclk_1_IBUF_BUFG                 |                                                                                                                                         | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  s_axis_aclk_0_IBUF_BUFG                 |                                                                                                                                         | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/rst_i |                1 |              3 |         3.00 |
+|  s_axis_aclk_1_IBUF_BUFG                 |                                                                                                                                         |                                                                                                         |                2 |              7 |         3.50 |
+|  s_axis_aclk_1_IBUF_BUFG                 |                                                                                                                                         | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              7 |         2.33 |
+|  s_axis_aclk_0_IBUF_BUFG                 |                                                                                                                                         |                                                                                                         |                3 |              7 |         2.33 |
+|  s_axis_aclk_0_IBUF_BUFG                 |                                                                                                                                         | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              7 |         2.33 |
+|  s_axis_aclk_1_IBUF_BUFG                 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] |                                                                                                         |                2 |              8 |         4.00 |
+|  s_axis_aclk_1_IBUF_BUFG                 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                2 |              8 |         4.00 |
+|  s_axis_aclk_1_IBUF_BUFG                 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                2 |              8 |         4.00 |
+|  s_axis_aclk_1_IBUF_BUFG                 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.ram_regout_en                                  | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                1 |              8 |         8.00 |
+|  s_axis_aclk_0_IBUF_BUFG                 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.ram_regout_en                                  | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                2 |              8 |         4.00 |
+|  s_axis_aclk_0_IBUF_BUFG                 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] |                                                                                                         |                2 |              8 |         4.00 |
+|  s_axis_aclk_0_IBUF_BUFG                 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1] | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                3 |              8 |         2.67 |
+|  s_axis_aclk_0_IBUF_BUFG                 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/Q[0]  |                2 |              8 |         4.00 |
+|  design_1_i/sipo_0/inst/sdata0           |                                                                                                                                         |                                                                                                         |                3 |              8 |         2.67 |
+|  s_axis_aclk_1_IBUF_BUFG                 | design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  |                                                                                                         |                2 |             16 |         8.00 |
+|  s_axis_aclk_0_IBUF_BUFG                 | design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                  |                                                                                                         |                2 |             16 |         8.00 |
+|  clk_0_IBUF_BUFG                         | design_1_i/sipo_0/inst/s_counter[2]_i_1_n_1                                                                                             |                                                                                                         |                8 |             30 |         3.75 |
+|  clk_1_IBUF_BUFG                         |                                                                                                                                         | design_1_i/PRESENT_ENCRYPT_0/inst/kreg[78]_i_1_n_1                                                      |               10 |             43 |         4.30 |
+|  design_1_i/PRESENT_ENCRYPT_0/n_0_0_BUFG |                                                                                                                                         |                                                                                                         |               13 |             64 |         4.92 |
+|  design_1_i/sipo_0/load_reg0             |                                                                                                                                         |                                                                                                         |               14 |             64 |         4.57 |
+|  design_1_i/sipo_0/load_reg00_out        | design_1_i/PRESENT_ENCRYPT_0/inst/done                                                                                                  |                                                                                                         |               14 |             64 |         4.57 |
+|  design_1_i/sipo_0/dat_reg0              | design_1_i/sipo_0/inst/ready                                                                                                            |                                                                                                         |               19 |             64 |         3.37 |
+|  clk_1_IBUF_BUFG                         |                                                                                                                                         |                                                                                                         |               28 |            107 |         3.82 |
++------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
